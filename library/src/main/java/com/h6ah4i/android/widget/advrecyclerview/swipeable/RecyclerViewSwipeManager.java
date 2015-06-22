@@ -752,14 +752,14 @@ public class RecyclerViewSwipeManager {
 
         if (amount == 0.0f) {
             slideItem(holder, amount, shouldAnimate);
-            mAdapter.setSwipeBackgroundDrawable(holder, itemPosition, reqBackgroundType);
+            mAdapter.setSwipeBackgroundDrawable(holder, itemPosition, reqBackgroundType, Math.abs(1.0f));
         } else {
             float adjustedAmount = amount;
 
             adjustedAmount = Math.max(adjustedAmount, holder2.getMaxLeftSwipeAmount());
             adjustedAmount = Math.min(adjustedAmount, holder2.getMaxRightSwipeAmount());
 
-            mAdapter.setSwipeBackgroundDrawable(holder, itemPosition, reqBackgroundType);
+            mAdapter.setSwipeBackgroundDrawable(holder, itemPosition, reqBackgroundType, Math.min(Math.abs(adjustedAmount),1.0f));
             slideItem(holder, adjustedAmount, shouldAnimate);
         }
     }

@@ -396,7 +396,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
     }
 
     @Override
-    public void onSetSwipeBackground(VH holder, int position, int type) {
+    public void onSetSwipeBackground(VH holder, int position, int type, float amount) {
         RecyclerView.Adapter adapter = getWrappedAdapter();
         if (!(adapter instanceof SwipeableItemAdapter)) {
             return;
@@ -405,7 +405,7 @@ class DraggableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
         int correctedPosition = getOriginalPosition(position);
 
         SwipeableItemAdapter<VH> swipeableItemAdapter = (SwipeableItemAdapter<VH>) adapter;
-        swipeableItemAdapter.onSetSwipeBackground(holder, correctedPosition, type);
+        swipeableItemAdapter.onSetSwipeBackground(holder, correctedPosition, type, amount);
     }
 
     @Override

@@ -188,12 +188,12 @@ class SwipeableItemWrapperAdapter<VH extends RecyclerView.ViewHolder> extends Ba
     // NOTE: This method is called from RecyclerViewDragDropManager
     /*package*/
     @SuppressWarnings("unchecked")
-    void setSwipeBackgroundDrawable(RecyclerView.ViewHolder holder, int position, int type) {
+    void setSwipeBackgroundDrawable(RecyclerView.ViewHolder holder, int position, int type, float amount) {
         if (LOCAL_LOGV) {
             Log.v(TAG, "setSwipeBackgroundDrawable(holder = " + holder + ", position = " + position + ", type = " + type + ")");
         }
 
-        mSwipeableItemAdapter.onSetSwipeBackground(holder, position, type);
+        mSwipeableItemAdapter.onSetSwipeBackground(holder, position, type, amount);
     }
 
     // NOTE: This method is called from RecyclerViewDragDropManager

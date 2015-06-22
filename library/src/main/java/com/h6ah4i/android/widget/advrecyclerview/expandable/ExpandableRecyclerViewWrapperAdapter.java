@@ -514,7 +514,7 @@ class ExpandableRecyclerViewWrapperAdapter
 
     @SuppressWarnings("unchecked")
     @Override
-    public void onSetSwipeBackground(RecyclerView.ViewHolder holder, int position, int type) {
+    public void onSetSwipeBackground(RecyclerView.ViewHolder holder, int position, int type, float amount) {
         if (!(mExpandableItemAdapter instanceof ExpandableSwipeableItemAdapter)) {
             return;
         }

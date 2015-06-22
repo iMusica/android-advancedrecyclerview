@@ -48,7 +48,7 @@ public interface SwipeableItemAdapter<T extends RecyclerView.ViewHolder> {
      *          {@link RecyclerViewSwipeManager#DRAWABLE_SWIPE_LEFT_BACKGROUND} or
      *          {@link RecyclerViewSwipeManager#DRAWABLE_SWIPE_RIGHT_BACKGROUND}.
      */
-    void onSetSwipeBackground(T holder, int position, int type);
+    void onSetSwipeBackground(T holder, int position, int type, float amount);
 
     /**
      * Called when item is swiped.
